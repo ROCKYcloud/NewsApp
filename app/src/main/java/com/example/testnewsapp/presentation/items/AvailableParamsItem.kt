@@ -1,4 +1,4 @@
-package com.example.testnewsapp.presenter.articlesScreen.item
+package com.example.testnewsapp.presentation.items
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow

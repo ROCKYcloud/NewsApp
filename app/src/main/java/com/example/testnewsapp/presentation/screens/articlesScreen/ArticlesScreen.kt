@@ -1,23 +1,21 @@
-package com.example.testnewsapp.presenter.articlesScreen
+package com.example.testnewsapp.presentation.screens.articlesScreen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Button
 import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import com.example.testnewsapp.presenter.articlesScreen.item.ArtcleItem
+import com.example.testnewsapp.presentation.items.ArtcleItem
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.testnewsapp.presenter.SharedViewModel
-import com.example.testnewsapp.presenter.articlesScreen.item.AvailableParamsItem
-import com.example.testnewsapp.presenter.articlesScreen.item.SearchView
+import com.example.testnewsapp.presentation.screens.SharedViewModel
+import com.example.testnewsapp.presentation.items.AvailableParamsItem
+import com.example.testnewsapp.presentation.items.SearchView
 
 @Composable
 fun ArticlesScreen(viewModel: SharedViewModel, navController: NavController) {

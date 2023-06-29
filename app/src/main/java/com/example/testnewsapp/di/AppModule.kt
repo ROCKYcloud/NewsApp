@@ -3,10 +3,10 @@ package com.example.testnewsapp.di
 import android.content.Context
 import androidx.room.Room
 import com.example.testnewsapp.data.remote.NewsApi
-import com.example.testnewsapp.data.repository.NewsRepository
-import com.example.testnewsapp.db.ArticleDao
-import com.example.testnewsapp.db.ArticleDatabase
-import com.example.testnewsapp.util.Constants
+import com.example.testnewsapp.domain.repository.NewsRepository
+import com.example.testnewsapp.domain.db.ArticleDao
+import com.example.testnewsapp.domain.db.ArticleDatabase
+import com.example.testnewsapp.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,13 +1,11 @@
-package com.example.testnewsapp.db
+package com.example.testnewsapp.domain.db
 
-import androidx.compose.runtime.MutableState
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.testnewsapp.data.model.Article
+import com.example.testnewsapp.data.models.Article
 
 @Dao
 interface ArticleDao {

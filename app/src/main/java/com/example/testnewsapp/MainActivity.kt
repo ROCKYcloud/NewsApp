@@ -6,15 +6,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.*
 import androidx.compose.runtime.*
-import androidx.navigation.NavHostController
-import com.example.testnewsapp.presenter.SharedViewModel
-import com.example.testnewsapp.navigation.MainScreen
+import com.example.testnewsapp.presentation.navigation.MainScreen
 import com.example.testnewsapp.ui.theme.TestNewsAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
     @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +21,4 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
-
-@Composable
-fun NavGraph(navController: NavHostController, viewModel: SharedViewModel) {
-
 }

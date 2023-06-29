@@ -1,4 +1,4 @@
-package com.example.testnewsapp.navigation
+package com.example.testnewsapp.presentation.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.List

@@ -1,18 +1,16 @@
-package com.example.testnewsapp.presenter
+package com.example.testnewsapp.presentation.screens
 
-import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.testnewsapp.data.model.Article
-import com.example.testnewsapp.data.repository.NewsRepository
-import com.plcoding.jetpackcomposepokedex.util.Resource
+import com.example.testnewsapp.data.models.Article
+import com.example.testnewsapp.domain.repository.NewsRepository
+import com.example.testnewsapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import com.example.testnewsapp.db.ArticleDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 

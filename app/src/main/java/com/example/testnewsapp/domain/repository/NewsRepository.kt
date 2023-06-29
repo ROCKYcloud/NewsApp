@@ -1,15 +1,9 @@
-package com.example.testnewsapp.data.repository
+package com.example.testnewsapp.domain.repository
 
-import android.util.Log
-import androidx.annotation.WorkerThread
-import androidx.compose.runtime.MutableState
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
-import com.example.testnewsapp.data.model.Article
+import com.example.testnewsapp.data.models.Article
 import com.example.testnewsapp.data.remote.NewsApi
-import com.example.testnewsapp.db.ArticleDao
-import com.plcoding.jetpackcomposepokedex.util.Resource
-import kotlinx.coroutines.launch
+import com.example.testnewsapp.domain.db.ArticleDao
+import com.example.testnewsapp.utils.Resource
 import javax.inject.Inject
 
 
@@ -54,7 +48,4 @@ class NewsRepository @Inject constructor(
     suspend fun getAllArticleFromDB() : List<Article> {
        return articleDao.getAllArticles()
    }
-
-
-
 }

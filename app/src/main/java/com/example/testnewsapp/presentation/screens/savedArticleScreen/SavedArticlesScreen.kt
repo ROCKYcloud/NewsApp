@@ -1,4 +1,4 @@
-package com.example.testnewsapp.presenter
+package com.example.testnewsapp.presentation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,10 +9,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.testnewsapp.presenter.articlesScreen.item.ArtcleItem
+import com.example.testnewsapp.presentation.items.ArtcleItem
+import com.example.testnewsapp.presentation.screens.SharedViewModel
 
 @Composable
 fun SavedArticlesScreen(

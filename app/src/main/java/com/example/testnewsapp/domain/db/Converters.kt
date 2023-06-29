@@ -1,10 +1,9 @@
-package com.example.testnewsapp.db
+package com.example.testnewsapp.domain.db
 
 import androidx.room.TypeConverter
-import com.example.testnewsapp.data.model.Source
+import com.example.testnewsapp.data.models.Source
 
 class Converters {
-
     @TypeConverter
     fun fromSource(source: Source): String {
         return source.name

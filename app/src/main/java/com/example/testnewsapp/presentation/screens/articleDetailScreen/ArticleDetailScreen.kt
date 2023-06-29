@@ -1,4 +1,4 @@
-package com.example.testnewsapp.presenter.articleDetailScreen
+package com.example.testnewsapp.presentation.screens.articleDetailScreen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
-import com.example.testnewsapp.presenter.SharedViewModel
+import com.example.testnewsapp.presentation.screens.SharedViewModel
 
 @Composable
 fun ArticleDetailScreen(navController: NavController, viewModel: SharedViewModel) {

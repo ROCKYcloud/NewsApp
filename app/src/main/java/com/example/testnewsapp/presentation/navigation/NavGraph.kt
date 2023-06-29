@@ -1,15 +1,13 @@
-package com.example.testnewsapp.navigation
+package com.example.testnewsapp.presentation.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.testnewsapp.data.model.Article
-import com.example.testnewsapp.presenter.SavedArticlesScreen
-import com.example.testnewsapp.presenter.SharedViewModel
-import com.example.testnewsapp.presenter.articleDetailScreen.ArticleDetailScreen
-import com.example.testnewsapp.presenter.articlesScreen.ArticlesScreen
+import com.example.testnewsapp.presentation.SavedArticlesScreen
+import com.example.testnewsapp.presentation.screens.SharedViewModel
+import com.example.testnewsapp.presentation.screens.articleDetailScreen.ArticleDetailScreen
+import com.example.testnewsapp.presentation.screens.articlesScreen.ArticlesScreen
 
 @Composable
 fun NavGraph(navController: NavHostController, viewModel: SharedViewModel) {

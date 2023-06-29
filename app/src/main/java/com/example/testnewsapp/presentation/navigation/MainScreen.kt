@@ -1,4 +1,4 @@
-package com.example.testnewsapp.navigation
+package com.example.testnewsapp.presentation.navigation
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.RowScope
@@ -15,7 +15,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.testnewsapp.presenter.SharedViewModel
+import com.example.testnewsapp.presentation.screens.SharedViewModel
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -47,7 +47,7 @@ fun BottomBar(navController: NavHostController) {
 }
 
 @Composable
-fun RowScope.AddItem(
+fun AddItem(
     screen: BottomBarScreen,
     currentDestination: NavDestination?,
     navController: NavHostController
