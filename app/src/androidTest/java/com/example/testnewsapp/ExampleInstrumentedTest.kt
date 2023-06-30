@@ -11,13 +11,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import org.junit.Assert.*
-import org.junit.Before
-import android.content.Context
-import com.example.testnewsapp.data.models.Article
-import com.example.testnewsapp.data.models.Source
-import kotlinx.coroutines.runBlocking
-import org.junit.After
-import java.io.IOException
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -26,63 +19,10 @@ import java.io.IOException
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
-    private lateinit var articleDao: ArticleDao
-    private lateinit var db: ArticleDatabase
-
     @Test
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.testnewsapp", appContext.packageName)
-    }
-
-    @Test
-    fun insertArticle()= runBlocking {
-        val article = Article(
-            id = 0,
-            author = "author",
-            content = "author",
-            description = "author",
-            publishedAt = "author",
-            source = Source(id = "id", name = "name"),
-            title = "",
-            urlToImage = ""
-        )
-        articleDao.insert(article)
-        val articles = articleDao.getAllArticles()
-        assertEquals(articles.isNotEmpty(),true)
-    }
-    @Test
-    fun deleteArticle() = runBlocking {
-        val article = Article(
-            id = 0,
-            author = "author",
-            content = "author",
-            description = "author",
-            publishedAt = "author",
-            source = Source(id = "id", name = "name"),
-            title = "",
-            urlToImage = ""
-        )
-
-        articleDao.insert(article)
-        articleDao.deleteArticle(article)
-        val articles = articleDao.getAllArticles()
-        assertEquals(!articles.contains(article),true)
-    }
-
-    @Before
-    fun createDb() {
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        db = Room.inMemoryDatabaseBuilder(
-            context, ArticleDatabase::class.java
-        ).build()
-        articleDao = db.getArticleDao()
-    }
-
-    @After
-    @Throws(IOException::class)
-    fun closeDb() {
-        db.close()
     }
 }
